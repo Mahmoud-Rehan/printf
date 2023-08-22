@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stdarg.h>
 
 void print_int(int n);
 
 /**
  * _printf - Function works like printf.
- * @format: The formated string.
+ * @format: The formatted string.
  * Return: The length.
  */
 
@@ -15,13 +16,12 @@ int _printf(const char *format, ...)
 	int n;
 	char *s;
 	char c;
+	va_list args;
 
 	if (format == NULL)
 	{
 		return (-1);
 	}
-
-	va_list args;
 
 	va_start(args, format);
 
